@@ -70,13 +70,13 @@ while playing:
 
     keys = pygame.key.get_pressed()
 
-    if keys[K_UP] and player_rect.top < HEIGHT:
+    if keys[K_UP] and player_rect.top > 0:
         player_rect = player_rect.move(player_move_top)
     if keys[K_DOWN] and player_rect.bottom < HEIGHT:
         player_rect = player_rect.move(player_move_down)
     if keys[K_RIGHT] and player_rect.right < WIDTH:
         player_rect = player_rect.move(player_move_right)
-    if keys[K_LEFT] and player_rect.left < WIDTH:
+    if keys[K_LEFT] and player_rect.left > 0:
         player_rect = player_rect.move(player_move_left)
 
     for enemy in enemies:
